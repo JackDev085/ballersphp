@@ -1,0 +1,31 @@
+.cards {
+  display: grid;
+  grid-template-columns: minmax(48%,40%) 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.card img{
+  height: 14rem;
+}
+.cards_atualizacoes{
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+
+
+@media (max-width:768px) {
+  .card img{
+    width: 14rem;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: black orange
+  }
+
+}

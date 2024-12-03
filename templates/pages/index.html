@@ -1,0 +1,10 @@
+{% extends "base/base.html" %}{% load static %} 
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock extracss %} 
+{% block content %}
+  <h1 class="mt-2">Treinos por categoria</h1>
+  {% include "partials/programas.html" %}
+  {% include "partials/contribuicao.html" %}
+  {% include "partials/atualizacoes.html" %}
+{% endblock content %}

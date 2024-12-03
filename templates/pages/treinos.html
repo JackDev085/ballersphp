@@ -1,0 +1,27 @@
+{% extends "base/base.html" %}{% load static %} {% block extracss %}
+<link rel="stylesheet" href="{% static 'css/treinos.css' %}" />
+{% endblock extracss %} {% block content %}
+<h1 class="mt-2">Treinos de {{categoria}}</h1>
+
+<div class="cards d-flex mt-5">
+  {% for treino in treinos %}
+  <div class="card">
+    <img
+      src="https://i.ytimg.com/vi/{{treino.link_video_treino}}/hqdefault.jpg"
+      class="card-img-top"
+      alt="Capa do treino"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{treino.nome}}</h5>
+      <p class="card-text"><strong>Duração:</strong> {{treino.duracao}}</p>
+      <p class="card-text"><strong>Envio:</strong> {{treino.data_criacao}}</p>
+      <a
+        href="{% url 'treino_exercicio' treino.categoria treino.caminho_treino_url %}"
+        class="btn btn-primary mt-2"
+        >Ver treino</a
+      >
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

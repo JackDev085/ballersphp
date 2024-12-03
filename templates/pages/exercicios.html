@@ -1,0 +1,47 @@
+{% extends "base/base.html" %} {% load static %}
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'css/exercicios.css' %}" />
+{% endblock extracss %}
+adsfsadfsadfdsafsadfsa
+{% block content %}
+  <h1 class="text-center">{{nome_treino}}</h1>
+
+  <!-- cards -->
+  {% include "partials/cards_exercicios.html" %}
+
+  <!-- Modal -->
+  {% include "partials/modal_youtube.html" %}
+
+{% endblock %}
+{% block extrajs %}
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var modal = document.getElementById('videoModal');
+    var video = document.getElementById('youtubeVideo');
+    var videoTitle = document.getElementById('videoModalLabel');
+
+    document.querySelectorAll('.openModalBtn').forEach(function (btn) {
+      btn.onclick = function () {
+        var videoSrc = 'https://www.youtube.com/embed/' + this.getAttribute('data-video');
+        var videoTitleText = this.getAttribute('data-title');
+        video.src = videoSrc + '?autoplay=1'; // Add autoplay to the video URL
+        videoTitle.innerText = videoTitleText; // Set the title of the modal
+      }
+    });
+
+    $('#videoModal').on('hide.bs.modal', function () {
+      video.src = ''; // Clear the video URL
+    });
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+        video.src = ''; // Clear the video URL
+      }
+    }
+  });
+</script>
+{% endblock extrajs %}
