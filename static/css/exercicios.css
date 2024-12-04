@@ -6,10 +6,10 @@
   overflow: hidden;
   padding-top: 56.25%;
 }
-.cards_exercicio{
+.cards_exercicio {
   flex-direction: column;
   align-items: center;
-  gap:0.5rem
+  gap: 0.5rem;
 }
 .embed-responsive-16by9 iframe {
   position: absolute;
