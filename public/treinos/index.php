@@ -1,8 +1,8 @@
 <?php
 $title = "Treinos";
 $extracss = "treinos.css";
-require "../public/src/connection.php";
-require "../public/repository/TreinosRepository.php";
+require "../../src/connection.php";
+require "../../src/repository/TreinosRepository.php";
 
 $treinos_repository = new TreinosRepository($pdo);
 

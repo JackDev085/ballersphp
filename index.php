@@ -1,9 +1,8 @@
 <?php
 
-echo $_GET["teste"];
-require "public/src/connection.php";
-require "public/repository/AtualizacoesRepository.php";
-require "public/repository/ProgramasRepository.php";
+require "src/connection.php";
+require "src/repository/AtualizacoesRepository.php";
+require "src/repository/ProgramasRepository.php";
 
 $atualizacoes_repository = new AtualizacoesRepository($pdo);
 $programas_repository = new ProgramasRepository($pdo);
@@ -18,7 +17,7 @@ ob_start();
     <div class="cards">
       <?php foreach ($programas as $obj): ?>
       
-        <a href="/treinos?categoria=<?php echo $obj["link_direcionamento"] ?>">
+        <a href="/public/treinos?categoria=<?php echo $obj["link_direcionamento"] ?>">
             <div class="card">
               <img src="<?php echo$base_url?>/static/imgs/gifs/<?php echo $obj["link_foto"]?>" class="card-img-top" alt="Treino de costas" />
               <h5 class="card-header text-center"><?php echo $obj["titulo"] ?></h5>
@@ -61,4 +60,4 @@ ob_start();
     </div>
 <?php 
 $content = ob_get_clean();
-include "base/base.php";
+include "public/base/base.php";

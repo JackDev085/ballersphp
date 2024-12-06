@@ -6,8 +6,8 @@ $extracss = "exercicios.css";
 ob_start();
 
 
-require "../public/src/connection.php";
-require "../public/repository/ExerciciosRepository.php";
+require "../../src/connection.php";
+require "../../src/repository/ExerciciosRepository.php";
 $exercicios_repository = new ExerciciosRepository($pdo);
 
 if(isset($_GET["treino_id"]) && !empty($_GET["treino_id"])){
