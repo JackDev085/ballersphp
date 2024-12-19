@@ -1,0 +1,68 @@
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+}
+main {
+  position: relative;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='orange' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.helptext {
+  color: rgb(6, 6, 177);
+}
+
+.register-container ul li {
+  color: rgb(6, 6, 177);
+}
+#main .errorlist li,
+#id_password2_helptext {
+  color: red;
+}
+.navbar img {
+  width: 4rem;
+  height: 4rem;
+}
+.navbar {
+  padding: 0;
+}
+.offcanvas {
+  background-color: rgb(255, 218, 173);
+  max-width: 60%;
+}
+
+.c .footer {
+  color: white;
+  width: 100%;
+  padding: 1rem;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+.footer p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.text-instagram {
+  color: darkorange;
+  text-decoration: underline;
+  padding-bottom: 1rem;
+}
+.text-instagram:hover {
+  color: rgb(255, 155, 32);
+}
+
+#main {
+  flex-direction: column;
+  max-width: 600px;
+}
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,20 @@
+.card-text {
+  padding: 0;
+  margin: 0;
+}
+.card {
+  width: 100%;
+}
+.cards {
+  gap: 1rem;
+}
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .cards,
+  .treinos {
+    flex-direction: column;
+  }
+}
